@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft= "10dp"
+    android:orientation="vertical"
+    android:paddingRight = "10dp" android:background="@color/background"
+    android:paddingTop = "10dp"
+    android:paddingBottom = "10dp"
+    android:id="@+id/myLayout">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
+        android:tint="@color/colorPrimaryDark"
+        android:src="@drawable/def" />
+    <TextView
+        android:id="@+id/balancelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable = "true"
+        android:paddingTop="40dp"
+        android:textColor = "#000000"
+        android:layout_below="@+id/photo"
+        android:text="Balance :"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/amounttext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/balancelabel"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:drawingCacheQuality="low"
+        android:hint="Debit or Credit Amount"
+        android:inputType="number"
+        android:textSize="15dp" />
+
+
+    <EditText
+        android:id="@+id/remarkstext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/amounttext"
+        android:drawingCacheQuality="low"
+        android:hint="Remarks"
+        android:paddingTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/withdrawbtn"
+
+        android:textAlignment="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/remarkstext"
+        android:layout_toLeftOf="@+id/view"
+        android:paddingTop="25dp"
+        android:textColor="#ffffff"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:onClick="withdrawbutton"
+        android:text="Debit" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_height="1dp"
+        android:layout_width="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/depositbtn"
+
+        android:paddingTop="25dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/remarkstext"
+        android:layout_toRightOf="@+id/view"
+        android:textColor="#ffffff"
+        style="@style/AppTheme.RoundedCornerMaterialButton"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:onClick="depositbutton"
+        android:text="Credit" />
+
+    <TextView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:paddingTop="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text = "Recent transaction"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id = "@+id/recenttransaction"
+        android:layout_below="@+id/depositbtn"
+        android:textColor = "#000000"
+        android:textSize = "20dp" />
+
+
+    <TextView
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text = ""
+        android:layout_gravity="center"
+        android:id = "@+id/recenttransactiondata"
+        android:layout_below="@+id/recenttransaction"
+        android:textColor = "#000000"
+        android:textSize = "18dp" />
+
+    <TextView
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text = ""
+        android:layout_gravity="center"
+        android:id = "@+id/recenttransactiondatatwo"
+        android:layout_below="@+id/recenttransaction"
+        android:textColor = "#000000"
+        android:textSize = "18dp" />
+</RelativeLayout>

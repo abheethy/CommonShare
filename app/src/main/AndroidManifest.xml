@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.commonshare">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        >
+        <activity
+            android:name="com.example.commonshare.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppThemeOne"
+            android:name="com.example.commonshare.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:theme="@style/AppThemeOne"
+            android:name="com.example.commonshare.RegistrationActivity"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:theme="@style/AppTheme"
+        android:name="com.example.commonshare.Amount"
+        android:label="@string/app_name" >
+
+    </activity>
+    </application>
+
+</manifest>
